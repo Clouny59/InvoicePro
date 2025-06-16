@@ -1,0 +1,294 @@
+/* ================================
+   STYLES POUR GESTION DES DEVIS
+================================ */
+
+.devis-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  width: 100%;
+}
+
+.devis-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  width: 100%;
+}
+
+.devis-form input,
+.devis-form textarea {
+  flex: 1 1 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.devis-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1 1 100%;
+}
+
+.devis-form button:hover {
+  background-color: var(--secondary);
+}
+
+.devis-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.devis-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+}
+
+.icon-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-actions svg {
+
+  font-size: 1.5rem;
+  padding: 0.15em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #FFF;
+}
+
+.pdf-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.edit-btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+}
+
+.view-btn {
+  background-color: rgb(0, 119, 255);
+  color: white;
+}
+
+.icon-actions svg:hover {
+  opacity: 0.8;
+}
+
+/* ================================
+     STYLES POUR AFFICHAGE DÉTAILLÉ D’UN DEVIS
+  ================================ */
+.devis-detail-container {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.devis-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.devis-detail-header h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.devis-detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.devis-detail-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25rem;
+}
+
+.devis-detail-section p {
+  margin: 0.25rem 0;
+}
+
+.devis-lines-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.devis-lines-table th,
+.devis-lines-table td {
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.devis-lines-table th {
+  background-color: var(--primary);
+  color: white;
+}
+
+.total-section {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.total-section span {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.return-button {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: var(--secondary);
+}
+
+/* ================================
+   MESSAGES UTILISATEUR (FORM)
+================================ */
+.form-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 500;
+    animation: fadeIn 0.4s ease-in;
+  }
+  
+  .form-message:empty {
+    display: none;
+  }
+  
+  .form-message::before {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  
+  /* Succès */
+  .form-message:has(:not([class*="❌"])) {
+    background-color: #e8f9e1;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+  }
+  
+  /* Erreur */
+  .form-message:has([class*="❌"]) {
+    background-color: #fdecea;
+    color: #c62828;
+    border: 1px solid #f5c6cb;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+/* src/assets/Devis/GestionDevis.css */
+
+.gestion-devis-container {
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.gestion-devis-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.devis-detail p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.devis-detail h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.lignes-devis-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background-color: #f9f9f9;
+}
+
+.lignes-devis-table th,
+.lignes-devis-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.lignes-devis-table th {
+  background-color: var(--primary);
+  color: white;
+}
+
+.form-message {
+  background-color: #ffe3e3;
+  color: #b30000;
+  border: 1px solid #ffb3b3;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
