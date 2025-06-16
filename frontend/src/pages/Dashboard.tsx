@@ -37,9 +37,6 @@ const Dashboard = () => {
                   Gestion des devis
                 </Link>
               </li>
-              <li>
-                <Link to="/autres">Autre section</Link>
-              </li>
             </ul>
           </nav>
         )}
