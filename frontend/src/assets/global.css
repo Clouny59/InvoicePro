@@ -2,11 +2,11 @@
    THEME 1 — MODERNE CLAIR
 ================================ */
 :root {
-    --primary: #ff9b3d;
-    --secondary: #ff7b00;
-    --background: #e7e7e7;
+    --primary: #0066cc;
+    --secondary: #004999;
+    --background: #f5f7fa;
     --text: #1f1f1f;
-    --border: #e0e0e0;
+    --border: #d0d7de;
     --radius: 8px;
   }
   
@@ -28,7 +28,7 @@
     height: 100%;
     z-index: -1;
   
-    background: radial-gradient(circle at center,#170031, #000,#170031 );
+    background: linear-gradient(135deg, #e6f2ff, #ffffff);
     background-size: 200% 300%;
     animation: pulseGradient 10s ease-in-out infinite;
   }
@@ -136,4 +136,3 @@
     color: red;
     text-align: center;
   }
-  

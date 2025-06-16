@@ -14,40 +14,40 @@
     padding: 0.5rem;
   }
   
-  .header-title {
+  .title {
     margin: 0 0 0 1rem;
     font-size: 1.5rem;
   }
-  
-  .header-nav {
+
+  .nav {
     display: flex;
     gap: 1rem;
     align-items: center;
   }
-  
-  .header-link {
+
+  .link {
     color: white;
     text-decoration: none;
     font-size: 1rem;
     margin: 0 1rem;
   }
-  
-  .header-button {
+
+  .button {
     background: none;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 1rem;
   }
-  
-  .header-username {
+
+  .username {
     font-weight: bold;
     margin-right: 0.5rem;
   }
-  
-  nav{
-    min-width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+nav {
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
